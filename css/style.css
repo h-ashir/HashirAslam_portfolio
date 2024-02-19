@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --body-bg: skyblue
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-thumb{
+    border-radius: 4px;
+    background-color: black;
+}
+html::-webkit-scrollbar-track{
+    background: white;
+}
+body{
+    background-color: var(--body-bg);
+    min-height: 100vh;
+    padding: 30px;
+}
+nav{
+    /* background-color: white; */
+    background: rgb(29,29,29);
+    background: radial-gradient(circle, rgba(29,29,29,1) 20%, rgba(29,29,29,1) 78%);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+    font-size: 1.1rem;
+}
+nav li .h-icon{
+    background-color: var(--body-bg);
+    border-radius: 50%;
+    padding: 10px 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+}
+nav a:hover{
+    color: rgba(255, 255, 255, 1);  
+}
+nav ul .logo-text{
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+    font-size: 1.55rem;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+#header .sidebar{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.308);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#header .sidebar li{
+    width: 100%;
+}
+#header .sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+
+/*  */
+
+
+
+@media(max-width: 768px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}

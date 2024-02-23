@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 :root{
     --body-bg: skyblue
@@ -19,7 +21,7 @@ html::-webkit-scrollbar-track{
 body{
     background-color: var(--body-bg);
     min-height: 100vh;
-    padding: 30px;
+    padding: 40px;
 }
 nav{
     /* background-color: white; */
@@ -37,16 +39,17 @@ nav ul{
     align-items: center;
 }
 nav li{
-    height: 50px;
-    font-size: 1.1rem;
+    height: 70px;
+    font-size: 1rem;
 }
 nav li .h-icon{
     background-color: var(--body-bg);
     border-radius: 50%;
-    padding: 10px 15px;
+    padding: 5px 15px;
     color: white;
     font-weight: bold;
     font-size: 1.6rem;
+    text-shadow: 1px 1px 1px black;
 }
 nav a{
     height: 100%;
@@ -55,6 +58,8 @@ nav a{
     align-items: center;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.7);
+    text-shadow: 1px 1px 1px black;
+    transition: .7s all linear;
 }
 nav a:hover{
     color: rgba(255, 255, 255, 1);  
@@ -82,7 +87,6 @@ nav li:first-child{
     justify-content: flex-start;
     align-items: flex-start;
 }
-
 #header .sidebar li{
     width: 100%;
 }
@@ -94,10 +98,416 @@ nav li:first-child{
 }
 
 /*  */
+#intro{
+    background: rgb(29,29,29);
+    background: radial-gradient(circle, rgba(29,29,29,1) 20%, rgba(29,29,29,1) 78%);
+}
+#intro .intro-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+#intro .intro-container .profile-image{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#intro .intro-container .profile-image img{
+    border-radius: 50%;
+    border: 10px solid gray;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    background-color: gray;
+    box-shadow: 10px 10px 30px black;
+}
+#intro .intro-container .profile-contents{
+    /* background-color: green; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#intro .intro-container .profile-contents h4{
+    font-size: 1.3rem;
+    font-weight: 100;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+#intro .intro-container .profile-contents h1{
+    font-size: 3rem;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 1px black;
+}
+#intro .intro-container .profile-contents p{
+    color: white;
+    font-weight: 300;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    line-height: 30px;
+    width: 85%;
+    text-shadow: 1px 1px 1px black;
+}
+#intro .intro-container .profile-contents .button{
+    display: flex;
+    gap: 10px;
+}
+#intro .intro-container .profile-contents .button  a{
+    text-decoration: none;
+}
+#intro .intro-container .profile-contents .button .linkedin-btn{
+    color: white;
+    padding: 10px 40px;
+    background-color: transparent;
+    border-radius: 40px;
+    transition: .6s all linear;
+    border: 3px solid rgb(7, 128, 241);
+    font-size: 1rem;
+    font-weight: 700;
+}
+#intro .intro-container .profile-contents .button .resume-btn{
+    color: white;
+    padding: 10px 40px;
+    background-color: transparent;
+    border-radius: 40px;
+    transition: .6s all linear;
+    border: 3px solid white;
+    font-size: 1rem;
+    font-weight: 700;
+}
+#intro .intro-container .profile-contents .button .linkedin-btn:hover{
+    color: white;
+    background-color: rgb(7, 128, 241);
+    cursor: pointer;
+}
+#intro .intro-container .profile-contents .button .resume-btn:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+#skills{
+    background: rgb(29,29,29);
+    background: radial-gradient(circle, rgba(29,29,29,1) 20%, rgba(29,29,29,1) 78%);
+}
+#skills .skills-container{
+    padding: 100px;
+}
+#skills .skills-container .title{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+#skills .skills-container .title h1{
+    color: white;
+    font-weight: 700;
+}
+#skills .skills-container .title .underline{
+    height: 2px;
+    width: 105px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: skyblue;
+}
+#skills .skills-container .skills-contents{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 10px;
+    color: white;
+}
+#skills .skills-container .skills-contents h3{
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 1px black;
+}
+#skills .skills-container .skills-contents p{
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px black;
+    font-size: .9rem;
+    line-height: 30px;
+}
+.skills-contents .skills-1,
+.skills-contents .skills-2,
+.skills-contents .skills-3,
+.skills-contents .skills-4{
+    width: 500px;
+}
+
+/*  */
+
+#education{
+    background: rgb(29,29,29);
+    background: radial-gradient(circle, rgba(29,29,29,1) 20%, rgba(29,29,29,1) 78%);
+}
+#education .education-container{
+    padding: 100px;
+}
+#education .education-container .title{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+#education .education-container .title h1{
+    color: white;
+    font-weight: 700;
+}
+#education .education-container .title .underline{
+    height: 2px;
+    width: 125px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: skyblue;
+}
+#education .education-container .education-contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px 30px;
+    color: white;
+    justify-content: center;
+}
+#education .education-container .education-contents h1{
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 1px black;
+}
+#education .education-container .education-contents h3{
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 1px black;
+}
+#education .education-container .education-contents p{
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px black;
+    font-size: .9rem;
+    line-height: 30px;
+}
+#education .education-contents .education-1,
+#education .education-contents .education-2,
+#education .education-contents .education-3{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: rgba(54, 54, 54, 0.473);
+    border-radius: 8px;
+    border: 3px solid gray;
+    transition: .5s all linear;
+}
+#education .education-contents .education-1:hover,
+#education .education-contents .education-2:hover,
+#education .education-contents .education-3:hover{
+    transform: scale(1.01);
+    border: 3px solid skyblue;
+    box-shadow: 2px 2px 8px skyblue;
+}
+
+/*  */
+
+#expertise{
+    background: rgb(29,29,29);
+    background: radial-gradient(circle, rgba(29,29,29,1) 20%, rgba(29,29,29,1) 78%);
+}
+#expertise .expertise-container{
+    padding: 100px;
+}
+#expertise .expertise-container .title{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+#expertise .expertise-container .title h1{
+    color: white;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+#expertise .expertise-container .title .underline{
+    height: 2px;
+    width: 125px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: skyblue;
+}
+#expertise .expertise-container .expertise-contents{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 40px 10px;
+    color: white;
+    justify-content: center;
+}
+#expertise .expertise-container .expertise-contents h1{
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 1px black;
+}
+#expertise .expertise-contents .expertise-1,
+#expertise .expertise-contents .expertise-2,
+#expertise .expertise-contents .expertise-3,
+#expertise .expertise-contents .expertise-4,
+#expertise .expertise-contents .expertise-5,
+#expertise .expertise-contents .expertise-6{
+    padding: 20px;
+    background-color: rgba(54, 54, 54, 0.473);
+    border-radius: 8px;
+    border: 3px solid gray;
+    transition: .4s all linear;
+    display: flex;
+    justify-content: center;
+    width: 170px;
+}
+#expertise .expertise-contents .expertise-1:hover,
+#expertise .expertise-contents .expertise-2:hover,
+#expertise .expertise-contents .expertise-3:hover,
+#expertise .expertise-contents .expertise-4:hover,
+#expertise .expertise-contents .expertise-5:hover,
+#expertise .expertise-contents .expertise-6:hover{
+    transform: scale(1.08);
+    box-shadow: 2px 2px 8px skyblue;
+    border: 3px solid skyblue;
+}
+
+/*  */
+#project{
+    background: rgb(29,29,29);
+    background: radial-gradient(circle, rgba(29,29,29,1) 20%, rgba(29,29,29,1) 78%);
+}
+#project .project-container{
+    padding: 100px;
+}
+#project .project-container .title{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+#project .project-container .title h1{
+    color: white;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+#project .project-container .title .underline{
+    height: 2px;
+    width: 105px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: skyblue;
+}
+#project .project-container .project-contents{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    gap: 20px;
+    padding: 40px 0px;
+    color: white;
+}
+#project .project-container .project-contents h1{
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 1px black;
+    font-size: 1.5rem;
+}
+#project .project-container .project-contents p{
+    font-weight: 200;
+    letter-spacing: .8px;
+    text-shadow: 1px 1px 1px black;
+    font-size: .9rem;
+    line-height: 30px;
+}
+#project .project-container .project-contents button{
+    color: white;
+    padding: 10px 40px;
+    background-color: transparent;
+    border-radius: 40px;
+    transition: .6s all linear;
+    border: 3px solid rgb(7, 128, 241);
+    font-size: 1rem;
+    font-weight: 700;
+}
+#project .project-container .project-contents button:hover{
+    color: white;
+    background-color: rgb(7, 128, 241);
+    cursor: pointer;
+}
+.project-contents .project-1,
+.project-contents .project-2,
+.project-contents .project-3,
+.project-contents .project-4{
+    width: 400px;
+    padding: 20px 20px;
+    background-color: rgba(54, 54, 54, 0.473);
+    border-radius: 8px;
+    border: 3px solid gray;
+    transition: .4s all linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.project-contents .project-1:hover,
+.project-contents .project-2:hover,
+.project-contents .project-3:hover,
+.project-contents .project-4:hover{
+    border: 3px solid skyblue;
+    transform: scale(1.02);
+    box-shadow: 2px 2px 8px skyblue;
+}
+footer{
+    /* border-top: 1px solid gray; */
+    box-shadow: 1px 1px 6px gray;
+    background: rgb(29,29,29);
+    background: radial-gradient(circle, rgba(29,29,29,1) 20%, rgba(29,29,29,1) 78%);
+    border-radius: 0px 0px 10px 10px;
+    padding: 30px;
+}
+footer #footer-container{
+    display: flex;
+    justify-content: space-between;
+}
+footer #footer-container ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: .85rem;
+    letter-spacing: .7px;
+}
+footer #footer-container ul a{
+    text-decoration: none;
+    color: white;
+    opacity: .6;
+    transition: .7s all linear;
+}
+footer #footer-container ul a:hover{
+    opacity: 1;
+}
+footer .footer-credit p{
+    color: white;
+    font-size: .9rem;
+    letter-spacing: .7px;
+    opacity: .85;
+}
 
 
 
-@media(max-width: 768px){
+
+
+
+@media(max-width: 800px){
     .hideOnMobile{
         display: none;
     }

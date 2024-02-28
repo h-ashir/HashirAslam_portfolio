@@ -6,7 +6,7 @@
     font-family: "Poppins", sans-serif;
 }
 :root{
-    --body-bg: skyblue
+    --body-bg: skyblue;
 }
 html::-webkit-scrollbar{
     width: .8rem;
@@ -187,7 +187,7 @@ nav li:first-child{
     background-color: white;
     cursor: pointer;
 }
-
+/*  */
 #skills{
     background: rgb(29,29,29);
     background: radial-gradient(circle, rgba(29,29,29,1) 20%, rgba(29,29,29,1) 78%);
@@ -210,7 +210,7 @@ nav li:first-child{
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: skyblue;
+    background-color: var(--body-bg);
 }
 #skills .skills-container .skills-contents{
     display: flex;
@@ -238,9 +238,7 @@ nav li:first-child{
 .skills-contents .skills-4{
     width: 500px;
 }
-
 /*  */
-
 #education{
     background: rgb(29,29,29);
     background: radial-gradient(circle, rgba(29,29,29,1) 20%, rgba(29,29,29,1) 78%);
@@ -263,7 +261,7 @@ nav li:first-child{
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: skyblue;
+    background-color: var(--body-bg);
 }
 #education .education-container .education-contents{
     display: flex;
@@ -309,12 +307,10 @@ nav li:first-child{
 #education .education-contents .education-2:hover,
 #education .education-contents .education-3:hover{
     transform: scale(1.01);
-    border: 3px solid skyblue;
-    box-shadow: 2px 2px 8px skyblue;
+    border: 3px solid var(--body-bg);
+    box-shadow: 2px 2px 8px var(--body-bg);
 }
-
 /*  */
-
 #expertise{
     background: rgb(29,29,29);
     background: radial-gradient(circle, rgba(29,29,29,1) 20%, rgba(29,29,29,1) 78%);
@@ -338,7 +334,7 @@ nav li:first-child{
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: skyblue;
+    background-color: var(--body-bg);
 }
 #expertise .expertise-container .expertise-contents{
     display: flex;
@@ -376,10 +372,9 @@ nav li:first-child{
 #expertise .expertise-contents .expertise-5:hover,
 #expertise .expertise-contents .expertise-6:hover{
     transform: scale(1.08);
-    box-shadow: 2px 2px 8px skyblue;
-    border: 3px solid skyblue;
+    box-shadow: 2px 2px 8px var(--body-bg);
+    border: 3px solid var(--body-bg);
 }
-
 /*  */
 #project{
     background: rgb(29,29,29);
@@ -404,7 +399,7 @@ nav li:first-child{
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: skyblue;
+    background-color: var(--body-bg);
 }
 #project .project-container .project-contents{
     display: flex;
@@ -463,7 +458,7 @@ nav li:first-child{
 .project-contents .project-4:hover{
     border: 3px solid skyblue;
     transform: scale(1.02);
-    box-shadow: 2px 2px 8px skyblue;
+    box-shadow: 2px 2px 8px var(--body-bg);
 }
 footer{
     box-shadow: 1px 1px 6px gray;
@@ -547,39 +542,12 @@ footer .footer-credit p{
         line-height: 28px;
         width: 100%;
     }
-    #intro .intro-container .profile-contents .button{
-        display: flex;
-        gap: 10px;
-    }
-    #intro .intro-container .profile-contents .button .linkedin-btn{
-        padding: 10px 40px;
-        border-radius: 40px;
-        font-size: 1rem;
-        font-weight: 700;
-    }
-    #intro .intro-container .profile-contents .button .resume-btn{
-        padding: 10px 40px;
-        border-radius: 40px;
-        font-size: 1rem;
-        font-weight: 700;
-    }
     /*  */
     #skills .skills-container{
         padding: 30px;
     }
-    #skills .skills-container .title h1{
-        font-weight: 700;
-    }
-    #skills .skills-container .title .underline{
-        height: 2px;
-        width: 105px;
-    }
     #skills .skills-container .skills-contents{
-        gap: 30px;
         padding: 20px 0px;
-    }
-    #skills .skills-container .skills-contents h3{
-        letter-spacing: 1px;
     }
     #skills .skills-container .skills-contents p{
         letter-spacing: .7px;
@@ -594,14 +562,6 @@ footer .footer-credit p{
     }
     #education .education-container{
         padding: 30px;
-    }
-    #education .education-container .title h1{
-        color: white;
-        font-weight: 700;
-    }
-    #education .education-container .title .underline{
-        height: 2px;
-        width: 125px;
     }
     #education .education-container .education-contents{
         padding: 30px 30px;
@@ -622,7 +582,6 @@ footer .footer-credit p{
     #education .education-contents .education-2,
     #education .education-contents .education-3{
         gap: 18px;
-        padding: 20px;
     }
     #expertise .expertise-container{
         padding: 30px;
@@ -632,8 +591,6 @@ footer .footer-credit p{
         width: 116px;
     }
     #expertise .expertise-container .expertise-contents{
-        flex-wrap: wrap;
-        gap: 50px;
         padding: 40px 5px;
     }
     #expertise .expertise-container .expertise-contents h1{
@@ -656,12 +613,7 @@ footer .footer-credit p{
         margin-bottom: 10px;
     }
     #project .project-container .title .underline{
-        height: 2px;
         width: 102px;
-    }
-    #project .project-container .project-contents{
-        gap: 20px;
-        padding: 40px 0px;
     }
     #project .project-container .project-contents h1{
         text-shadow: 1.05px 1.05px 1px black;
@@ -669,20 +621,13 @@ footer .footer-credit p{
     }
     #project .project-container .project-contents p{
         letter-spacing: .6px;
-        font-size: .9rem;
         line-height: 28px;
-    }
-    #project .project-container .project-contents button{
-        padding: 10px 40px;
-        font-size: 1rem;
     }
     .project-contents .project-1,
     .project-contents .project-2,
     .project-contents .project-3,
     .project-contents .project-4{
-        width: 400px;
         padding: 20px 10px;
-        gap: 20px;
     }
     footer #footer-container ul{
         gap: 14px;

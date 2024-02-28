@@ -56,9 +56,10 @@ nav a{
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.7);
-    text-shadow: 1px 1px 1px black;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 1.3px 1.3px 1px black;
     transition: .7s all linear;
+    letter-spacing: .7px;
 }
 nav a:hover{
     color: rgba(255, 255, 255, 1);  
@@ -95,7 +96,6 @@ nav li:first-child{
 .menu-button{
     display: none;
 }
-
 /*  */
 #intro{
     background: rgb(29,29,29);
@@ -164,6 +164,7 @@ nav li:first-child{
     border: 3px solid rgb(7, 128, 241);
     font-size: 1rem;
     font-weight: 700;
+    box-shadow: 2px 2px 5px black;
 }
 #intro .intro-container .profile-contents .button .resume-btn{
     color: white;
@@ -174,6 +175,7 @@ nav li:first-child{
     border: 3px solid white;
     font-size: 1rem;
     font-weight: 700;
+    box-shadow: 2px 2px 5px black;
 }
 #intro .intro-container .profile-contents .button .linkedin-btn:hover{
     color: white;
@@ -285,7 +287,7 @@ nav li:first-child{
     text-shadow: 2px 2px 1px black;
 }
 #education .education-container .education-contents p{
-    font-weight: 300;
+    font-weight: 200;
     letter-spacing: 1px;
     text-shadow: 1px 1px 1px black;
     font-size: .9rem;
@@ -433,6 +435,7 @@ nav li:first-child{
     border: 3px solid rgb(7, 128, 241);
     font-size: 1rem;
     font-weight: 700;
+    box-shadow: 2px 2px 10px black;
 }
 #project .project-container .project-contents button:hover{
     color: white;
@@ -505,7 +508,6 @@ footer .footer-credit p{
         width: 435px;
     }
 }
-
 
 @media(max-width: 1200px){
     nav li{
@@ -682,7 +684,6 @@ footer .footer-credit p{
         padding: 20px 10px;
         gap: 20px;
     }
-
     footer #footer-container ul{
         gap: 14px;
         font-size: .8rem;
@@ -694,6 +695,10 @@ footer .footer-credit p{
     }
 }
 @media(max-width: 890px){
+    body{
+        background: rgb(29,29,29);
+        background: radial-gradient(circle, rgba(29,29,29,1) 20%, rgba(29,29,29,1) 78%);
+    }
     nav{
         border-radius: 0px 0px 0px 0px;
     }
@@ -776,8 +781,445 @@ footer .footer-credit p{
     .skills-contents .skills-4{
         width: 338px;
     }
+    #education .education-container .education-contents{
+        padding: 30px 30px;
+    }
+    #education .education-container .education-contents h1{
+        font-size: 1.1rem;
+    }
+    #education .education-container .education-contents h3{
+        font-size: 1rem;
+    }
+    #education .education-container .education-contents p{
+        font-size: .8rem;
+        line-height: 20px;
+    }
+    #education .education-contents .education-1,
+    #education .education-contents .education-2,
+    #education .education-contents .education-3{
+        gap: 15px;
+        padding: 20px;
+    }
+    #expertise .expertise-container .expertise-contents{
+        gap: 45px;
+        padding: 40px 5px;
+    }
+    #expertise .expertise-container .expertise-contents h1{
+        font-size: 1rem;
+    }
+    #expertise .expertise-contents .expertise-1,
+    #expertise .expertise-contents .expertise-2,
+    #expertise .expertise-contents .expertise-3,
+    #expertise .expertise-contents .expertise-4,
+    #expertise .expertise-contents .expertise-5,
+    #expertise .expertise-contents .expertise-6{
+        padding: 16px;
+        width: 150px;
+    }
+    #project .project-container{
+        padding: 30px;
+    }
+    #project .project-container .title h1{
+        margin-bottom: 10px;
+    }
+    #project .project-container .title .underline{
+        height: 2px;
+        width: 100px;
+    }
+    #project .project-container .project-contents{
+        gap: 20px;
+        padding: 40px 0px;
+    }
+    #project .project-container .project-contents h1{
+        font-size: 1.25rem;
+    }
+    #project .project-container .project-contents p{
+        letter-spacing: .6px;
+        font-size: .85rem;
+        line-height: 26px;
+    }
+    #project .project-container .project-contents button{
+        padding: 10px 40px;
+        font-size: .9rem;
+    }
+    .project-contents .project-1,
+    .project-contents .project-2,
+    .project-contents .project-3,
+    .project-contents .project-4{
+        width: fit-content;
+        gap: 15px;
+    }
     footer{
         border-radius: 0px 0px 0px 0px;
+    }
+    footer #footer-container ul{
+        gap: 12px;
+        font-size: .77rem;
+        letter-spacing: .6px;
+    }
+    footer .footer-credit p{
+        font-size: .8rem;
+    }
+}
+
+@media(max-width: 768px){
+    #intro .intro-container{
+        flex-direction: column;
+    }
+    #intro .intro-container .profile-image img{
+        width: 280px;
+        height: 280px;
+    }
+    #intro .intro-container .profile-contents{
+        align-items: center;
+        gap: 7px;
+    }
+    #intro .intro-container .profile-contents h4{
+        font-size: 1.2rem;
+    }
+    #intro .intro-container .profile-contents h1{
+        font-size: 2.5rem;
+    }
+    #intro .intro-container .profile-contents p{
+        font-size: .85rem;
+        line-height: 27.5px;
+    }
+    #intro .intro-container .profile-contents .button .linkedin-btn{
+        padding: 10px 40px;
+        font-size: .9rem;
+    }
+    #intro .intro-container .profile-contents .button .resume-btn{
+        padding: 10px 40px;
+        font-size: .9rem;
+    }
+    #skills .skills-container{
+        padding: 30px;
+    }
+    #skills .skills-container .skills-contents{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px 0px;
+    }
+    #skills .skills-container .skills-contents p{
+        letter-spacing: .7px;
+        font-size: .85rem;
+        line-height: 25px;
+    }
+    .skills-contents .skills-1,
+    .skills-contents .skills-2,
+    .skills-contents .skills-3,
+    .skills-contents .skills-4{
+        width: fit-content;
+    }
+    #education .education-container .education-contents{
+        gap: 40px;
+        padding: 30px 30px;
+    }
+    #education .education-container .education-contents h1{
+        font-size: 1.1rem;
+    }
+    #education .education-container .education-contents h3{
+        font-size: 1rem;
+    }
+    #education .education-container .education-contents p{
+        font-size: .8rem;
+        line-height: 20px;
+    }
+    #education .education-contents .education-1,
+    #education .education-contents .education-2,
+    #education .education-contents .education-3{
+        gap: 15px;
+        padding: 20px;
+    }
+    #expertise .expertise-container .expertise-contents{
+        gap: 35px;
+        padding: 40px 5px;
+    }
+    #expertise .expertise-container .expertise-contents h1{
+        font-size: 1rem;
+    }
+    #expertise .expertise-contents .expertise-1,
+    #expertise .expertise-contents .expertise-2,
+    #expertise .expertise-contents .expertise-3,
+    #expertise .expertise-contents .expertise-4,
+    #expertise .expertise-contents .expertise-5,
+    #expertise .expertise-contents .expertise-6{
+        padding: 15px;
+        width: 150px;
+    }
+    #project .project-container{
+        padding: 30px;
+    }
+    #project .project-container .title h1{
+        margin-bottom: 10px;
+    }
+    #project .project-container .title .underline{
+        height: 2px;
+        width: 100px;
+    }
+    #project .project-container .project-contents{
+        flex-direction: column;
+        gap: 35px;
+        padding: 40px 10px;
+    }
+    #project .project-container .project-contents h1{
+        font-size: 1.2rem;
+    }
+    #project .project-container .project-contents p{
+        letter-spacing: .6px;
+        font-size: .85rem;
+        line-height: 26px;
+    }
+    #project .project-container .project-contents button{
+        padding: 10px 40px;
+        font-size: .9rem;
+    }
+    .project-contents .project-1,
+    .project-contents .project-2,
+    .project-contents .project-3,
+    .project-contents .project-4{
+        width: fit-content;
+    }
+    footer #footer-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    footer #footer-container ul{
+        font-size: .85rem;
+    }
+    footer .footer-credit p{
+        font-size: .85rem;
+    }
+}
+@media(max-width: 580px){
+    #intro .intro-container .profile-image img{
+        width: 280px;
+        height: 280px;
+    }
+    #intro .intro-container .profile-contents{
+        margin-top: 25px;
+        align-items: center;
+        gap: 7px;
+    }
+    #intro .intro-container .profile-contents h4{
+        font-size: 1.12rem;
+    }
+    #intro .intro-container .profile-contents h1{
+        font-size: 2.4rem;
+    }
+    #intro .intro-container .profile-contents p{
+        font-size: .85rem;
+        line-height: 25.5px;
+        text-align: justify;
+        padding: 0px 10px;
+    }
+    #intro .intro-container .profile-contents .button .linkedin-btn{
+        padding: 8px 37px;
+        font-size: .85rem;
+    }
+    #intro .intro-container .profile-contents .button .resume-btn{
+        padding: 8px 37px;
+        font-size: .85rem;
+    }
+    #skills .skills-container{
+        padding: 30px;
+    }
+    #skills .skills-container .skills-contents{
+        gap: 25px;
+        padding: 20px 10px;
+    }
+    #skills .skills-container .skills-contents p{
+        font-size: .85rem;
+        line-height: 25px;
+    }
+    #education .education-container .education-contents{
+        gap: 35px;
+        padding: 30px 10px;
+    }
+    #education .education-container .education-contents h1{
+        font-size: 1.1rem;
+    }
+    #education .education-container .education-contents h3{
+        font-size: 1rem;
+    }
+    #education .education-container .education-contents p{
+        font-size: .8rem;
+        line-height: 20px;
+    }
+    #education .education-contents .education-1,
+    #education .education-contents .education-2,
+    #education .education-contents .education-3{
+        gap: 15px;
+        padding: 20px;
+    }
+    #expertise .expertise-container .expertise-contents{
+        gap: 30px;
+        padding: 40px 10px;
+    }
+    #expertise .expertise-container .expertise-contents h1{
+        font-size: 1.15rem;
+    }
+    #expertise .expertise-contents .expertise-1,
+    #expertise .expertise-contents .expertise-2,
+    #expertise .expertise-contents .expertise-3,
+    #expertise .expertise-contents .expertise-4,
+    #expertise .expertise-contents .expertise-5,
+    #expertise .expertise-contents .expertise-6{
+        padding: 15px;
+        width: 100%;
+    }
+    #project .project-container{
+        padding: 30px;
+    }
+    #project .project-container .title h1{
+        margin-bottom: 10px;
+    }
+    #project .project-container .title .underline{
+        height: 2px;
+        width: 102px;
+    }
+    #project .project-container .project-contents{
+        gap: 35px;
+        padding: 40px 10px;
+    }
+    #project .project-container .project-contents h1{
+        font-size: 1.2rem;
+    }
+    #project .project-container .project-contents p{
+        letter-spacing: .6px;
+        font-size: .85rem;
+        line-height: 26px;
+    }
+    #project .project-container .project-contents button{
+        padding: 10px 40px;
+        font-size: .9rem;
+    }
+    .project-contents .project-1,
+    .project-contents .project-2,
+    .project-contents .project-3,
+    .project-contents .project-4{
+        width: fit-content;
+    }
+    footer #footer-container{
+        gap: 15px;
+    }
+    footer #footer-container ul{
+        font-size: .8rem;
+    }
+    footer .footer-credit p{
+        font-size: .8rem;
+    }
+}
+@media(max-width: 460px){
+    nav li .h-icon{
+        padding: 5px 15px;
+        font-size: 1.25rem;
+    }
+    nav ul .logo-text{
+        font-size: 1.2rem;
+    }
+    #intro .intro-container .profile-image img{
+        width: 265px;
+        height: 265px;
+    }
+    #intro .intro-container .profile-contents{
+        margin-top: 25px;
+        gap: 7px;
+    }
+    #intro .intro-container .profile-contents h4{
+        font-size: 1.07rem;
+    }
+    #intro .intro-container .profile-contents h1{
+        font-size: 2.3rem;
+    }
+    #intro .intro-container .profile-contents p{
+        font-size: .8rem;
+        line-height: 25px;
+    }
+    #intro .intro-container .profile-contents .button .linkedin-btn{
+        font-size: .82rem;
+    }
+    #intro .intro-container .profile-contents .button .resume-btn{
+        font-size: .82rem;
+    }
+    #skills .skills-container{
+        padding: 30px;
+    }
+    #skills .skills-container .skills-contents{
+        gap: 25px;
+        padding: 20px 10px;
+    }
+    #skills .skills-container .skills-contents p{
+        font-size: .8rem;
+        line-height: 25px;
+        text-align: justify;
+    }
+    #education .education-container .education-contents{
+        gap: 35px;
+        padding: 30px 0px;
+    }
+    #education .education-container .education-contents h1{
+        font-size: 1rem;
+    }
+    #education .education-container .education-contents h3{
+        font-size: .85rem;
+        text-shadow: .4px .4px 1px black;
+    }
+    #education .education-container .education-contents p{
+        font-size: .75rem;
+        line-height: 20px;
+    }
+    #education .education-contents .education-1,
+    #education .education-contents .education-2,
+    #education .education-contents .education-3{
+        gap: 15px;
+        padding: 20px;
+    }
+    #expertise .expertise-container .expertise-contents{
+        padding: 40px 0px;
+    }
+    #expertise .expertise-container .expertise-contents h1{
+        font-size: 1rem;
+    }
+    #project .project-container{
+        padding: 30px;
+    }
+    #project .project-container .title h1{
+        margin-bottom: 10px;
+    }
+    #project .project-container .project-contents{
+        gap: 35px;
+        padding: 40px 0px;
+    }
+    #project .project-container .project-contents h1{
+        font-size: 1.05rem;
+    }
+    #project .project-container .project-contents p{
+        font-size: .85rem;
+        line-height: 25px;
+    }
+    #project .project-container .project-contents button{
+        padding: 8px 37px;
+        font-size: .85rem;
+    }
+    footer #footer-container{
+        gap: 15px;
+    }
+    footer #footer-container ul{
+        font-size: .85rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+@media(max-width: 370px){
+    #intro .intro-container .profile-image img{
+        width: 235px;
+        height: 235px;
     }
 }
 

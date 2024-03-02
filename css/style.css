@@ -80,6 +80,7 @@ nav li:first-child{
     width: 250px;
     z-index: 999;
     background-color: rgba(255, 255, 255, 0.458);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;

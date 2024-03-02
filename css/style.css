@@ -96,6 +96,7 @@ nav li:first-child{
 }
 .menu-button{
     display: none;
+    filter:drop-shadow(6px 6px 15px white);
 }
 /*  */
 #intro{

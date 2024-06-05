@@ -13,7 +13,7 @@ html::-webkit-scrollbar{
 }
 html::-webkit-scrollbar-thumb{
     border-radius: 4px;
-    background-color: black;
+    background-color: rgb(29,29,29);
 }
 html::-webkit-scrollbar-track{
     background: white;
@@ -22,6 +22,14 @@ body{
     background-color: var(--body-bg);
     min-height: 100vh;
     padding: 40px;
+}
+@keyframes disappear{
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 nav{
     background: rgb(29,29,29);
@@ -36,6 +44,7 @@ nav ul{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    animation: disappear 1.2s linear;
 }
 nav li{
     height: 70px;
@@ -46,9 +55,9 @@ nav li .h-icon{
     border-radius: 50%;
     padding: 5px 15px;
     color: white;
+    text-shadow: 10px 10px 5px solid black;
     font-weight: bold;
     font-size: 1.6rem;
-    text-shadow: 1px 1px 1px black;
 }
 nav a{
     height: 100%;
@@ -62,12 +71,15 @@ nav a{
     letter-spacing: .7px;
 }
 nav a:hover{
-    color: rgba(255, 255, 255, 1);  
+    color: var(--body-bg);  
 }
 nav ul .logo-text{
     color: rgba(255, 255, 255, 1);
     font-weight: bold;
     font-size: 1.55rem;
+}
+nav ul .logo-text:hover{
+    cursor: default;
 }
 nav li:first-child{
     margin-right: auto;
@@ -109,25 +121,57 @@ nav li:first-child{
     align-items: center;
     padding: 100px;
 }
+@keyframes slideInImage {
+    from {
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideInContent {
+    from {
+        opacity: 0;
+        transform: translateX(30%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 #intro .intro-container .profile-image{
     display: flex;
     justify-content: center;
     width: 100%;
+    opacity: 0;
+    transform: translateX(-30%);
+    animation: slideInImage 2s forwards;
 }
 #intro .intro-container .profile-image img{
     border-radius: 50%;
-    border: 10px solid gray;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     object-fit: cover;
     background-color: gray;
-    box-shadow: 10px 10px 30px black;
+    box-shadow: 20px 20px 30px black;
+    border-top: 4px solid var(--body-bg);
+    border-bottom: 4px solid var(--body-bg);
+}
+#intro .intro-container .profile-image img:hover{
+    box-shadow: 3px 3px 20px var(--body-bg);
+    transform: scale(1.02);
+    transition: 1s linear;
 }
 #intro .intro-container .profile-contents{
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    opacity: 0;
+    transform: translateX(-30%);
+    animation: slideInContent 2s forwards; 
 }
 #intro .intro-container .profile-contents h4{
     font-size: 1.3rem;
@@ -138,13 +182,14 @@ nav li:first-child{
 #intro .intro-container .profile-contents h1{
     font-size: 3rem;
     color: white;
+    letter-spacing: 1.5px;
     font-weight: bolder;
     text-shadow: 2px 2px 1px black;
 }
 #intro .intro-container .profile-contents p{
     color: white;
     font-weight: 300;
-    font-size: .9rem;
+    font-size: .99rem;
     letter-spacing: 1px;
     line-height: 30px;
     width: 90%;
@@ -195,6 +240,7 @@ nav li:first-child{
     background: radial-gradient(circle, rgba(29,29,29,1) 20%, rgba(29,29,29,1) 78%);
 }
 #skills .skills-container{
+    animation: disappear 1.2s linear;
     padding: 100px;
 }
 #skills .skills-container .title{
@@ -235,10 +281,16 @@ nav li:first-child{
     line-height: 30px;
 }
 .skills-contents .skills-1,
+.skills-contents .skills-3{
+    width: 500px;
+    /* transform: translateX(-30%);
+    animation: slideInImage 2s forwards;  */
+}
 .skills-contents .skills-2,
-.skills-contents .skills-3,
 .skills-contents .skills-4{
     width: 500px;
+    /* transform: translateX(30%);
+    animation: slideInContent 2s forwards;  */
 }
 /*  */
 #education{
@@ -247,6 +299,7 @@ nav li:first-child{
 }
 #education .education-container{
     padding: 100px;
+    animation: disappear 1.2s linear;
 }
 #education .education-container .title{
     display: flex;
@@ -293,9 +346,7 @@ nav li:first-child{
     font-size: .9rem;
     line-height: 30px;
 }
-#education .education-contents .education-1,
-#education .education-contents .education-2,
-#education .education-contents .education-3{
+#education .education-contents .education-item{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -303,12 +354,10 @@ nav li:first-child{
     background-color: rgba(54, 54, 54, 0.473);
     border-radius: 8px;
     border: 3px solid gray;
-    transition: .5s all linear;
+    transition: .4s all linear;
 }
-#education .education-contents .education-1:hover,
-#education .education-contents .education-2:hover,
-#education .education-contents .education-3:hover{
-    transform: scale(1.01);
+#education .education-contents .education-item:hover{
+    transform: scale(1.04);
     border: 3px solid var(--body-bg);
     box-shadow: 2px 2px 8px var(--body-bg);
 }
@@ -319,6 +368,7 @@ nav li:first-child{
 }
 #expertise .expertise-container{
     padding: 100px;
+    animation: disappear 1.2s linear;
 }
 #expertise .expertise-container .title{
     display: flex;
@@ -342,7 +392,7 @@ nav li:first-child{
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    padding: 40px 10px;
+    padding: 40px 14px;
     color: white;
     justify-content: center;
 }
@@ -352,12 +402,7 @@ nav li:first-child{
     letter-spacing: 1px;
     text-shadow: 2px 2px 1px black;
 }
-#expertise .expertise-contents .expertise-1,
-#expertise .expertise-contents .expertise-2,
-#expertise .expertise-contents .expertise-3,
-#expertise .expertise-contents .expertise-4,
-#expertise .expertise-contents .expertise-5,
-#expertise .expertise-contents .expertise-6{
+#expertise .expertise-contents .expertise-item{
     padding: 20px;
     background-color: rgba(54, 54, 54, 0.473);
     border-radius: 8px;
@@ -367,12 +412,7 @@ nav li:first-child{
     justify-content: center;
     width: 170px;
 }
-#expertise .expertise-contents .expertise-1:hover,
-#expertise .expertise-contents .expertise-2:hover,
-#expertise .expertise-contents .expertise-3:hover,
-#expertise .expertise-contents .expertise-4:hover,
-#expertise .expertise-contents .expertise-5:hover,
-#expertise .expertise-contents .expertise-6:hover{
+#expertise .expertise-contents .expertise-item:hover{
     transform: scale(1.08);
     box-shadow: 2px 2px 8px var(--body-bg);
     border: 3px solid var(--body-bg);
@@ -384,6 +424,7 @@ nav li:first-child{
 }
 #project .project-container{
     padding: 100px;
+    animation: disappear 1.2s linear;
 }
 #project .project-container .title{
     display: flex;
@@ -440,10 +481,7 @@ nav li:first-child{
     background-color: rgb(7, 128, 241);
     cursor: pointer;
 }
-.project-contents .project-1,
-.project-contents .project-2,
-.project-contents .project-3,
-.project-contents .project-4{
+.project-contents .project-item{
     width: 400px;
     padding: 20px 20px;
     background-color: rgba(54, 54, 54, 0.473);
@@ -455,10 +493,7 @@ nav li:first-child{
     align-items: center;
     gap: 20px;
 }
-.project-contents .project-1:hover,
-.project-contents .project-2:hover,
-.project-contents .project-3:hover,
-.project-contents .project-4:hover{
+.project-contents .project-item:hover{
     border: 3px solid skyblue;
     transform: scale(1.02);
     box-shadow: 2px 2px 8px var(--body-bg);
@@ -494,9 +529,10 @@ footer #footer-container ul a:hover{
 }
 footer .footer-credit p{
     color: white;
-    font-size: .9rem;
+    font-size: .8rem;
     letter-spacing: .7px;
-    opacity: .85;
+    opacity: .55;
+    font-weight: bold;
 }
 @media(max-width: 1330px){
     .skills-contents .skills-1,
@@ -528,7 +564,7 @@ footer .footer-credit p{
     #intro .intro-container .profile-image img{
         width: 300px;
         height: 300px;
-    }
+    }ME
     #intro .intro-container .profile-contents{
         width: 100%;
         gap: 8px;
@@ -581,9 +617,7 @@ footer .footer-credit p{
         font-size: .85rem;
         line-height: 30px;
     }
-    #education .education-contents .education-1,
-    #education .education-contents .education-2,
-    #education .education-contents .education-3{
+    #education .education-contents .education-item{
         gap: 18px;
     }
     #expertise .expertise-container{
@@ -600,12 +634,7 @@ footer .footer-credit p{
         font-size: 1.05rem;
         text-shadow: 1.05px 1.05px 1px black;
     }
-    #expertise .expertise-contents .expertise-1,
-    #expertise .expertise-contents .expertise-2,
-    #expertise .expertise-contents .expertise-3,
-    #expertise .expertise-contents .expertise-4,
-    #expertise .expertise-contents .expertise-5,
-    #expertise .expertise-contents .expertise-6{
+    #expertise .expertise-contents .expertise-item{
         padding: 18px;
         width: 150px;
     }
@@ -626,10 +655,7 @@ footer .footer-credit p{
         letter-spacing: .6px;
         line-height: 28px;
     }
-    .project-contents .project-1,
-    .project-contents .project-2,
-    .project-contents .project-3,
-    .project-contents .project-4{
+    .project-contents .project-item{
         padding: 20px 10px;
     }
     footer #footer-container ul{
@@ -650,6 +676,7 @@ footer .footer-credit p{
     nav{
         border-radius: 0px 0px 0px 0px;
     }
+    /* nav a{} */
     #intro .intro-container .profile-image img{
         width: 270px;
         height: 270px;
@@ -742,9 +769,7 @@ footer .footer-credit p{
         font-size: .8rem;
         line-height: 20px;
     }
-    #education .education-contents .education-1,
-    #education .education-contents .education-2,
-    #education .education-contents .education-3{
+    #education .education-contents .education-item{
         gap: 15px;
         padding: 20px;
     }
@@ -755,12 +780,7 @@ footer .footer-credit p{
     #expertise .expertise-container .expertise-contents h1{
         font-size: 1rem;
     }
-    #expertise .expertise-contents .expertise-1,
-    #expertise .expertise-contents .expertise-2,
-    #expertise .expertise-contents .expertise-3,
-    #expertise .expertise-contents .expertise-4,
-    #expertise .expertise-contents .expertise-5,
-    #expertise .expertise-contents .expertise-6{
+    #expertise .expertise-contents .expertise-item{
         padding: 16px;
         width: 150px;
     }
@@ -790,10 +810,7 @@ footer .footer-credit p{
         padding: 10px 40px;
         font-size: .9rem;
     }
-    .project-contents .project-1,
-    .project-contents .project-2,
-    .project-contents .project-3,
-    .project-contents .project-4{
+    .project-contents .project-item{
         width: fit-content;
         gap: 15px;
     }
@@ -875,9 +892,7 @@ footer .footer-credit p{
         font-size: .8rem;
         line-height: 20px;
     }
-    #education .education-contents .education-1,
-    #education .education-contents .education-2,
-    #education .education-contents .education-3{
+    #education .education-contents .education-item{
         gap: 15px;
         padding: 20px;
     }
@@ -888,12 +903,7 @@ footer .footer-credit p{
     #expertise .expertise-container .expertise-contents h1{
         font-size: 1rem;
     }
-    #expertise .expertise-contents .expertise-1,
-    #expertise .expertise-contents .expertise-2,
-    #expertise .expertise-contents .expertise-3,
-    #expertise .expertise-contents .expertise-4,
-    #expertise .expertise-contents .expertise-5,
-    #expertise .expertise-contents .expertise-6{
+    #expertise .expertise-contents .expertise-item{
         padding: 15px;
         width: 150px;
     }
@@ -924,10 +934,7 @@ footer .footer-credit p{
         padding: 10px 40px;
         font-size: .9rem;
     }
-    .project-contents .project-1,
-    .project-contents .project-2,
-    .project-contents .project-3,
-    .project-contents .project-4{
+    .project-contents .project-item{
         width: fit-content;
     }
     footer #footer-container{
@@ -998,9 +1005,7 @@ footer .footer-credit p{
         font-size: .8rem;
         line-height: 20px;
     }
-    #education .education-contents .education-1,
-    #education .education-contents .education-2,
-    #education .education-contents .education-3{
+    #education .education-contents .education-item{
         gap: 15px;
         padding: 20px;
     }
@@ -1011,12 +1016,7 @@ footer .footer-credit p{
     #expertise .expertise-container .expertise-contents h1{
         font-size: 1.15rem;
     }
-    #expertise .expertise-contents .expertise-1,
-    #expertise .expertise-contents .expertise-2,
-    #expertise .expertise-contents .expertise-3,
-    #expertise .expertise-contents .expertise-4,
-    #expertise .expertise-contents .expertise-5,
-    #expertise .expertise-contents .expertise-6{
+    #expertise .expertise-contents .expertise-item{
         padding: 15px;
         width: 100%;
     }
@@ -1046,10 +1046,7 @@ footer .footer-credit p{
         padding: 10px 40px;
         font-size: .9rem;
     }
-    .project-contents .project-1,
-    .project-contents .project-2,
-    .project-contents .project-3,
-    .project-contents .project-4{
+    .project-contents .project-item{
         width: fit-content;
     }
     footer #footer-container{
@@ -1121,9 +1118,7 @@ footer .footer-credit p{
         font-size: .75rem;
         line-height: 20px;
     }
-    #education .education-contents .education-1,
-    #education .education-contents .education-2,
-    #education .education-contents .education-3{
+    #education .education-contents .education-item{
         gap: 15px;
         padding: 20px;
     }

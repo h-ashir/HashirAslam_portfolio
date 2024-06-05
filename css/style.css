@@ -283,14 +283,10 @@ nav li:first-child{
 .skills-contents .skills-1,
 .skills-contents .skills-3{
     width: 500px;
-    /* transform: translateX(-30%);
-    animation: slideInImage 2s forwards;  */
 }
 .skills-contents .skills-2,
 .skills-contents .skills-4{
     width: 500px;
-    /* transform: translateX(30%);
-    animation: slideInContent 2s forwards;  */
 }
 /*  */
 #education{
@@ -564,7 +560,7 @@ footer .footer-credit p{
     #intro .intro-container .profile-image img{
         width: 300px;
         height: 300px;
-    }ME
+    }
     #intro .intro-container .profile-contents{
         width: 100%;
         gap: 8px;

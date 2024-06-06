@@ -108,7 +108,7 @@ nav li:first-child{
 }
 .menu-button{
     display: none;
-    filter:drop-shadow(6px 6px 15px white);
+    filter:drop-shadow(3px 3px 12px white);
 }
 /*  */
 #intro{
@@ -353,8 +353,10 @@ nav li:first-child{
     transition: .4s all linear;
 }
 #education .education-contents .education-item:hover{
-    transform: scale(1.04);
-    border: 3px solid var(--body-bg);
+    transform: scale(1.035);
+    border-top: 6px solid aqua;
+    border-left: 6px solid aqua;
+    /* border: 3px solid var(--body-bg); */
     box-shadow: 2px 2px 8px var(--body-bg);
 }
 /*  */
@@ -409,9 +411,11 @@ nav li:first-child{
     width: 170px;
 }
 #expertise .expertise-contents .expertise-item:hover{
-    transform: scale(1.08);
+    transform: scale(1.06);
+    border-top: 5px solid aqua;
+    border-left: 5px solid aqua;
     box-shadow: 2px 2px 8px var(--body-bg);
-    border: 3px solid var(--body-bg);
+    /* border: 3px solid var(--body-bg); */
 }
 /*  */
 #project{

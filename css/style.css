@@ -531,10 +531,7 @@ footer .footer-credit p{
     font-weight: bold;
 }
 @media(max-width: 1330px){
-    .skills-contents .skills-1,
-    .skills-contents .skills-2,
-    .skills-contents .skills-3,
-    .skills-contents .skills-4{
+    .skills-contents .skills-item{
         width: 435px;
     }
 }
@@ -589,10 +586,7 @@ footer .footer-credit p{
         font-size: .9rem;
         line-height: 26px;
     }
-    .skills-contents .skills-1,
-    .skills-contents .skills-2,
-    .skills-contents .skills-3,
-    .skills-contents .skills-4{
+    .skills-contents .skills-item{
         width: 360px;
     }
     #education .education-container{
@@ -746,10 +740,7 @@ footer .footer-credit p{
         font-size: .9rem;
         line-height: 26px;
     }
-    .skills-contents .skills-1,
-    .skills-contents .skills-2,
-    .skills-contents .skills-3,
-    .skills-contents .skills-4{
+    .skills-contents .skills-item{
         width: 338px;
     }
     #education .education-container .education-contents{
@@ -868,10 +859,7 @@ footer .footer-credit p{
         font-size: .85rem;
         line-height: 25px;
     }
-    .skills-contents .skills-1,
-    .skills-contents .skills-2,
-    .skills-contents .skills-3,
-    .skills-contents .skills-4{
+    .skills-contents .skills-item{
         width: fit-content;
     }
     #education .education-container .education-contents{

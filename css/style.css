@@ -154,6 +154,8 @@ nav li:first-child{
     width: 400px;
     height: 400px;
     object-fit: cover;
+    /* object-position: center 18%; */
+    /* transform: scale(1.18); */
     background-color: gray;
     box-shadow: 20px 20px 30px black;
     border-top: 4px solid var(--body-bg);
@@ -161,7 +163,7 @@ nav li:first-child{
 }
 #intro .intro-container .profile-image img:hover{
     box-shadow: 3px 3px 20px var(--body-bg);
-    transform: scale(1.02);
+    /* transform: scale(1.2); */
     transition: 1s linear;
 }
 #intro .intro-container .profile-contents{
